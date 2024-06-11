@@ -113,7 +113,8 @@ func (r Running) Calories() float64 {
 // Это переопределенный метод TrainingInfo() из Training.
 func (r Running) TrainingInfo() InfoMessage {
 	// вставьте ваш код ниже
-	info := InfoMessage{}
+	info := r.Training.TrainingInfo()
+	info.Calories = r.Calories()
 	return info
 }
 
